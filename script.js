@@ -27,7 +27,7 @@ function insertarPokemon() {
             const pokeImagen = document.createElement('img');
             pokeImagen.src = responseJSON.sprites.front_default;
 
-            const pokemonName = document.createElement('h1');
+            const pokemonName = document.createElement('h2');
             pokemonName.innerText = `Name: ${responseJSON.name} | id: ${responseJSON.id}`;
 
             const pokemonType = document.createElement('h3');
@@ -35,7 +35,7 @@ function insertarPokemon() {
 
             const contenedor = document.createElement('section');
             contenedor.append(pokeImagen, pokemonName, pokemonType);
-            
+
             appNode.appendChild(contenedor);
         })
         .catch(error => {
